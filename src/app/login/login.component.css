@@ -1,0 +1,154 @@
+body
+{
+     margin: 0;
+    padding: 0;
+    background-size: 100%;
+    background-position: center;
+}
+.login-contianer{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 35px;
+    background-color: white;
+    padding: 0px;
+    width: 40%;
+    border-radius: 15px;
+}
+.form-cc
+{    padding: 40px;
+    margin-top: 0px;
+    float: left;
+    width: 100%;
+}
+
+.userloginheading
+{
+    color: #F9F1E9;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+ 
+  margin-bottom: 25px;
+}
+
+.form-control
+{
+        background-color: #94e4e5;
+    border-radius: 35px;
+    font-size: 22px;
+    text-align: center;
+    padding: 9px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    height: 55px;
+    border: 1px solid #55b6bc;
+    margin-top: 15px;
+    box-shadow: 0px 2px 6px #00000026;
+  
+}
+
+.welcome
+{
+  color: white;
+    text-align: center;
+    font-size: 1em;
+    font-family: unset;
+    text-transform: uppercase;
+    padding-top: 15px;
+    letter-spacing: 3px;
+}
+.subtext
+{
+  color: white;
+    text-align: center;
+    font-family: inherit;
+}
+
+.anchr{
+  color: #1bb79a;
+}
+
+.submitbtn{
+  color: white;
+    text-align: center;
+    padding: 10px;
+    width: 60%;
+    border-radius: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    background-image: linear-gradient(to right top, #00a1b5, #00a6b5, #00acb5, #00b1b4, #00b6b2);
+    margin-bottom: 25px;
+}
+.width100{width:100%;}
+.mt40{margin-top:40px;}
+.form-control::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+.m-auto{
+  margin:auto;
+}
+
+.pull-left{float:left;}
+.anchr:hover{cursor:pointer;color:#00a1b5;}
+.box svg
+{
+  height: auto;
+    width: 100%;
+    background-size: 100%;
+    background-position: center;
+}
+
+.bg_top {
+    width: 100%;
+    height: 330px;
+    float: left;
+    background-size: 100%;
+}
+
+@-webkit-keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes blink-1 {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.container{
+    padding-top: 250px;
+}
+
+.reg{
+    text-align: center;
+    padding: 5px;
+    color: #F9F1E9;
+}
+
+.modal-content{
+    color: #F9F1E9;
+    background: linear-gradient(to right, rgb(0, 180, 219), rgb(0, 131, 176));
+}

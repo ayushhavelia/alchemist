@@ -1,0 +1,9 @@
+nav{
+    background: linear-gradient(to right, rgb(0, 180, 219), rgb(0, 131, 176));
+}
+
+.text-modify, .nav-link {
+    color: #F9F1E9;
+    font-size: 20px;
+    font-weight: 200;
+}

@@ -1,0 +1,14 @@
+const express = require('express');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://ayushhavelia:ayush12345@ds157956.mlab.com:57956/alchemist',{useNewUrlParser:true});
+const http = require('http');
+const cors = require('cors');
+const app = express();
+app.use(cors());
+var questionapi = require('./rest/question');
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.get('/', questionapi);
+http.createServer(app).listen(process.env.PORT || 3000);
+console.log("Backend Server is On", process.env.PORT || 3000);

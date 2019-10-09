@@ -1,0 +1,70 @@
+.large-header {
+    position: relative;
+    width: 100%;
+    background: #111;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
+ }
+ 
+ .demo .large-header {
+    background: linear-gradient(to right, rgb(0, 180, 219), rgb(0, 131, 176));
+ }
+ 
+ .main-title {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    color: #F9F1E9;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+    animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+ }
+ 
+ .demo .main-title {
+    text-transform: uppercase;
+    font-size: 7vw;
+    letter-spacing: 0.1em;
+ }
+ 
+ .main-title .thin {
+    font-weight: 300;
+ }
+ 
+ @media only screen and (max-width: 768px) {
+    .demo .main-title {
+       font-size: 3em;
+    }
+ }
+
+ @-webkit-keyframes reveal {
+   80% {
+     letter-spacing: 8px;
+   }
+   100% {
+     background-size: 300% 300%;
+   }
+ }
+ @keyframes reveal {
+   80% {
+     letter-spacing: 8px;
+   }
+   100% {
+     background-size: 300% 300%;
+   }
+ }
+ @-webkit-keyframes glow {
+   40% {
+     text-shadow: 0 0 8px #fff;
+   }
+ }
+ @keyframes glow {
+   40% {
+     text-shadow: 0 0 8px #fff;
+   }
+ }

@@ -1,0 +1,81 @@
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Register User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                    <form #regForm="ngForm" (ngSubmit)="register()"> 
+                            <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="userModel.name" name="name">
+                            </div>
+                            </div>
+                            <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="email" class="form-control" id="lmail" placeholder="Email" [(ngModel)]="userModel.email" name="email">
+                            </div>
+                            </div>
+                            <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="collg" placeholder="College Name" [(ngModel)]="userModel.college" name="college">
+                            </div>
+                            </div>
+                            <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="number" placeholder="Contact No." [(ngModel)]="userModel.contact" name="contact">
+                                    </div>
+                                    </div>
+                            <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="password" class="form-control" id="pass" placeholder="Password" [(ngModel)]="userModel.pass" name="pass">
+                            </div>
+                            <div class="col-sm-12 width100 mt40 text-center">
+                            <button type="submit" class="submitbtn btn btn-primary" data-dismiss="modal">Register</button>
+                                
+                            </div>
+                            </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 offset-md-3">
+            <div class="col-md-6 m-auto">
+            
+            <div class="userloginheading">Login</div>
+            </div>
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group row">
+                <div class="col-sm-12">
+                    <input type="email" class="form-control" id="mail" placeholder="Email" [(ngModel)]="userModel.email" name="email">
+                </div>
+                </div>
+                <div class="form-group row">
+                <div class="col-sm-12">
+                    <input type="password" class="form-control" id="pass" placeholder="Password" [(ngModel)]="userModel.pass" name="pass">
+                </div>
+                </div>
+                <div class="form-group row">
+                <div class="col-sm-12 width100 mt40 text-center">
+                <button type="submit" class="submitbtn btn btn-primary">
+                    <a routerLink="qsn"></a>Login</button>
+                    
+                </div>
+                </div>
+            </form>
+            <p class="reg">New User?
+                <a class="reg" href="#" data-target="#modelId" data-toggle="modal" >Register</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<router-outlet></router-outlet>
