@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Question} from '../question';
 import {HttpClient} from '@angular/common/http';
-
+import {QuestionService} from 'services/question.service'
 @Component({
   selector: 'app-addqsn',
   templateUrl: './addqsn.component.html',
@@ -9,21 +8,27 @@ import {HttpClient} from '@angular/common/http';
 })
 
 export class AddqsnComponent implements OnInit {
-  qsnModel= new Question('','','','','','');
-  constructor(private http: HttpClient){}
+  constructor(private qsnService: QuestionService){}
 
-
+  
   ngOnInit() {
 
   }
    
-  onSubmit(){
-    this.onAddQuestion(this.qsnModel);
+  onSubmit(qsnForm){
+    // this.onAddQuestion(qsnForm);
+    this.qsnService.insertQuestion({
+      'qsnno':qsnForm.qsnno,
+      'qsn': qsnForm.qsn,
+      'ans': qsnForm.ans,
+      'hint1': qsnForm.hint1,
+      'hint2': qsnForm.hint2,
+      'hint3':qsnForm.hint3}).subscribe();
+
   }
-  url='https://localhost:3000/';
-  onAddQuestion(qsnModel){
-    this.http.post(this.url,qsnModel).subscribe(res => {
-      console.log(res);
-    });
-  }
+  // url='https://localhost:3000/addques';
+  // onAddQuestion(qsnForm){
+  //   this.http.post(this.url,{'qsnno':qsnForm.qsnno,'qsn':qsnForm.qsn,'ans':qsnForm.ans,'hint1':qsnForm.hint1,'hint2':qsnForm.hint2,'hint3':qsnForm.hint3}).subscribe(res =>
+  //     console.log(res.json()));
+  // }
 }

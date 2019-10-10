@@ -10,7 +10,8 @@ var userSchema = new mongoose.Schema({
     totalhints : {type: Number},
     lefthint: {type: Number},
     score: {type: Number},
-    skipleft: {type: Number}
+    skipleft: {type: Number},
+    attempts: {type: Number }
 });
 
-mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', userSchema);

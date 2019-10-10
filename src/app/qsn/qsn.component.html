@@ -8,7 +8,7 @@
             <input name="answer" class="answer-text" type="text" placeholder="Answer">
             <button type="submit" class="submitbtn btn btn-primary width100 mt40">Submit</button>
             <button type="submit" class="submitbtn btn btn-primary"(click)="showHint()">Hint</button>
-            <button type="submit" class="submitbtn btn btn-primary adjust-btn">Skip</button>
+            <button type="submit" class="submitbtn btn btn-primary adjust-btn" (click)="skipQsn()" [hidden]="!showskip">Skip</button>
             <input name="answer" class="answer-text" type="text" disabled [hidden]="!shint" >
         </div>
     </div>

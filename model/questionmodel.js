@@ -9,4 +9,6 @@ var qsnSchema = new mongoose.Schema({
     hint3 : {type: String},
 });
 
-mongoose.model('Question', qsnSchema);
+var Question = mongoose.model('Question', qsnSchema);
+
+module.exports = Question;

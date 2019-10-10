@@ -1,33 +1,33 @@
 <div class="container-fluid mb-5">
-    <form #qsnForm="ngForm" (ngSubmit)="onSubmit()">
+    <form #qsnForm (ngSubmit)="onSubmit(qsnForm)">
         <div class="form-group">
-            <label for="qsnNo">Qsn No</label>
-            <input id="qsnNo" type="text" required class="form-control" [(ngModel)]="qsnModel.qsnno" name="qsnNo" >
+            <label for="qsnno">Qsn No</label>
+            <input id="qsnno" type="text" required class="form-control" ngModel name="qsnno" >
         </div>
 
         <div class="form-group">
             <label for="qsn">Qsn</label>
-            <input id="qsn" type="text" required class="form-control" [(ngModel)]="qsnModel.qsn" name="qsn">
+            <input id="qsn" type="text" required class="form-control" ngModel name="qsn">
         </div>
 
         <div class="form-group">
             <label for="ans">Ans</label>
-            <input id="ans" type="text" required class="form-control" [(ngModel)]="qsnModel.ans" name="ans">
+            <input id="ans" type="text" required class="form-control" ngModel name="ans">
         </div>
 
         <div class="form-group">
             <label for="hint1">Hint1</label>
-            <input id="hint1" type="text" required class="form-control" [(ngModel)]="qsnModel.hint1" name="hint1">
+            <input id="hint1" type="text" required class="form-control" ngModel name="hint1">
         </div>
 
         <div class="form-group">
             <label for="hint2">Hint2</label>
-            <input id="hint2" type="text" required class="form-control" [(ngModel)]="qsnModel.hint2" name="hint2">
+            <input id="hint2" type="text" required class="form-control" ngModel name="hint2">
         </div>
 
         <div class="form-group">
             <label for="hint3">Hint3</label>
-            <input id="hint3" type="text" class="form-control" [(ngModel)]="qsnModel.hint3" name="hint3">
+            <input id="hint3" type="text" class="form-control" ngModel name="hint3">
         </div>
 
         <button class="btn btn-primary" type="submit">Submit</button>
